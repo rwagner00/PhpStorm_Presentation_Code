@@ -6,7 +6,7 @@
  * Date: 8/7/16
  * Time: 3:56 PM
  */
-class RaceCar extends Vehicle {
+class RaceCar extends Car {
   private $RaceCarEngine;
   private $RaceCarSeats;
   private $RaceCarEngineSize;

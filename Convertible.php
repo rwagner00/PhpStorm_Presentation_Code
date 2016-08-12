@@ -6,7 +6,7 @@
  * Date: 8/7/16
  * Time: 3:56 PM
  */
-class Convertible extends Vehicle{
+class Convertible extends Car{
   private $ConvertibleEngine;
   private $ConvertibleSeats;
   private $ConvertibleEngineSize;

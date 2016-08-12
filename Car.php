@@ -6,7 +6,7 @@
  * Date: 8/7/16
  * Time: 3:55 PM
  */
-class Vehicle {
+class Car {
   private $CarEngine;
   private $CarSeats;
   private $CarEngineSize;
@@ -44,47 +44,6 @@ class Vehicle {
     $this->CarSeatSize = $carSeatSize;
 
     $this->CarSeats = $this->getCarSeats();
-  }
-
-
-  /**
-   * @return mixed
-   */
-  public function getCarEngine() {
-    return $this->CarEngine;
-  }
-
-  /**
-   * @param mixed $CarEngine
-   */
-  public function setCarEngine($CarEngine) {
-    $this->CarEngine = $CarEngine;
-  }
-
-  /**
-   * @return mixed
-   */
-  public function getCarSeats() {
-    // Because at some point someone decided we really should store car seats
-    // in terms of car seat size. But the client wants to return number of car
-    // seats in terms of cubic centimeters.
-
-    $size_in_inches = pow($this->CarSeatSize, 1/3);
-
-    $size_in_cm = $size_in_inches * 2.54;
-
-    $size_in_cubic_cm = pow($size_in_cm, 3);
-
-    $carseats = $this->CarSeats;
-
-    return $carseats;
-  }
-
-  /**
-   * @param mixed $CarSeats
-   */
-  public function setCarSeats($CarSeats) {
-    $this->CarSeats = $CarSeats;
   }
 
   /**
@@ -185,5 +144,53 @@ class Vehicle {
     $this->CarDriveTrain = $CarDriveTrain;
   }
 
+  /**
+   * @return mixed
+   */
+  public function getCarSeatSize() {
+    return $this->CarSeatSize;
+  }
+
+  /**
+   * @param mixed $CarSeatSize
+   */
+  public function setCarSeatSize($CarSeatSize) {
+    $this->CarSeatSize = $CarSeatSize;
+  }
+
+
+  /**
+   * @return mixed
+   */
+  public function getCarEngine() {
+    return $this->CarEngine;
+  }
+
+  /**
+   * @param mixed $CarEngine
+   */
+  public function setCarEngine($CarEngine) {
+    $this->CarEngine = $CarEngine;
+  }
+
+  /**
+   * @return mixed
+   */
+  public function getCarSeats() {
+    // Because at some point someone decided we really should store car seats
+    // in terms of car seat size. But the client wants to return number of car
+    // seats in terms of cubic centimeters.
+    $carseatsize = 36;
+
+    $size_in_inches = pow($carseatsize, 1/3);
+
+    $size_in_cm = $size_in_inches * 2.54;
+
+    $size_in_cubic_cm = pow($size_in_cm, 3);
+
+    $carseats = $this->CarSeats;
+
+    return $carseats;
+  }
 
 }

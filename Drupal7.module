@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_node_load().
+ */
+function Drupal7_node_load($nodes, $types) {
+
+  if (isset($nodes[0]['content']['field_deep_array']['#value']['und']['0'])) {
+    $nodes[0]['content']['field_deep_array']['#value']['und']['0'] =
+      $nodes[0]['content']['field_deep_array']['#value']['und']['0'] . 'extra text.';
+  }
+  else {
+    return $nodes[0]['content']['field_deep_array']['#value']['und']['0'];
+  }
+}

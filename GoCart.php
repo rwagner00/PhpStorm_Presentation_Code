@@ -6,7 +6,7 @@
  * Date: 8/7/16
  * Time: 3:56 PM
  */
-class GoCart extends Vehicle {
+class GoCart extends Car {
   private $GoCartEngine;
 
 

@@ -11,7 +11,7 @@ include_once 'RaceCar.php';
 include_once 'GoCart.php';
 
 
-$vehicle = new Vehicle('engine', 'seats', 'engine_size', 'top_speed', 'car_doors', 'car_wheel_size', 'tire_size', 'fuel_mileage', 'drive_train', 400.4);
+$vehicle = new Car('engine', 'seats', 'engine_size', 'top_speed', 'car_doors', 'car_wheel_size', 'tire_size', 'fuel_mileage', 'drive_train', 400.4);
 
 $raceCar = new RaceCar('engine', 'seats', 'engine_size', 'top_speed', 'car_doors', 'car_wheel_size', 'tire_size', 'fuel_mileage', 'drive_train', 400.4);
 
